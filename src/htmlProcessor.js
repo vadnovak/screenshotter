@@ -1,5 +1,5 @@
-const cheerio = require('cheerio');
-const fs = require('fs-extra');
+import * as cheerio from 'cheerio';
+import fs from 'fs/promises';
 
 class HTMLTemplateProcessor {
     constructor(templatePath) {
@@ -8,16 +8,15 @@ class HTMLTemplateProcessor {
 
     async processHTML(htmlContent) {
         const $ = cheerio.load(htmlContent);
-        const bodyContent = $('body').html(); // Вибираємо вміст тега <body>
-        
+        const bodyContent = $('body').html();
+
         const template = await fs.readFile(this.templatePath, 'utf-8');
         const $template = cheerio.load(template);
-        
-        // Вставляємо вміст у тег <mj-body> шаблону
+
         $template('mj-body').html(bodyContent);
 
         return $template.html();
     }
 }
 
-module.exports = HTMLTemplateProcessor;
+export default HTMLTemplateProcessor;
