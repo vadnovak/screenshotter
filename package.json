@@ -1,0 +1,28 @@
+{
+  "name": "layouts-thumbnails-generator",
+  "version": "1.0.0",
+  "description": "Layouts thumbnail generator tool",
+  "main": "src/index.js",
+  "bin": {
+    "thumbgen": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "email",
+    "thumbnail",
+    "generator"
+  ],
+  "author": "Novak V",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "fs-extra": "^11.1.0",
+    "glob": "^10.0.0",
+    "puppeteer": "^23.6.1",
+    "winston": "^3.8.2"
+  }
+}
