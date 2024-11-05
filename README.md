@@ -41,7 +41,7 @@ thumbgen
 ## Project Structure
 - `src/index.js`: Main generation script
 - `src/config/config.js`: Application configuration
-- `src/htmlProcessor.js`: HTML template processor
+- `src/emailProcessor.cjs`: HTML template processor
 - `src/utils/logger.js`: Logging setup
 
 ## Logging

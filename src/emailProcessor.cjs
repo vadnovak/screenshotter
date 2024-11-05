@@ -1,5 +1,5 @@
-import * as cheerio from 'cheerio';
-import fs from 'fs/promises';
+const cheerio = require('cheerio');
+const fs = require('fs-extra');
 
 class HTMLTemplateProcessor {
     constructor(templatePath) {
@@ -19,4 +19,4 @@ class HTMLTemplateProcessor {
     }
 }
 
-export default HTMLTemplateProcessor;
+module.exports = HTMLTemplateProcessor;

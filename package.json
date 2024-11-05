@@ -8,6 +8,8 @@
   },
   "scripts": {
     "start": "node src/index.js",
+    "email": "node src/index.js email",
+    "brief": "node src/index.js brief",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
@@ -15,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0",
+    "commander": "^12.1.0",
     "dotenv": "^16.0.3",
     "fs-extra": "^11.1.0",
     "p-limit": "^6.1.0",
